@@ -258,7 +258,7 @@ class GhostHunterEngine:
 if __name__ == "__main__":
     # Example Usage
     category_input = "Italian Restaurants"
-    location_input = "Brooklyn, NY"
+    location_input = "Vadodara, IN"
     
     engine = GhostHunterEngine()
     asyncio.run(engine.run(category_input, location_input))
