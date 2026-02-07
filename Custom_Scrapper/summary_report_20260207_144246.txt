@@ -2,14 +2,14 @@
 LEAD GENERATION SUMMARY REPORT
 ============================================================
 
-Generated: 2026-02-07 12:58:10
+Generated: 2026-02-07 14:42:46
 
 OVERALL STATS
 ------------------------------------------------------------
-Total Leads Collected: 5
-High-Quality Leads: 5
-Emails Generated: 5
-Average Score: 81.0
+Total Leads Collected: 55
+High-Quality Leads: 55
+Emails Generated: 55
+Average Score: 43.7
 
 TOP 10 LEADS
 ------------------------------------------------------------
@@ -44,10 +44,40 @@ TOP 10 LEADS
    Location: Seattle, WA
    Website: https://example-shoplocal.com
 
+6. stagecaptions.io (Score: 40)
+   Industry: Tech/SaaS
+   Funding: Launch - Unknown
+   Location: Global
+   Website: https://www.producthunt.com/r/p/1069661?app_id=339
+
+7. GitBoard (Score: 40)
+   Industry: Tech/SaaS
+   Funding: Launch - Unknown
+   Location: Global
+   Website: https://www.producthunt.com/r/p/1074100?app_id=339
+
+8. Developer Docs Audit (Score: 40)
+   Industry: Tech/SaaS
+   Funding: Launch - Unknown
+   Location: Global
+   Website: https://www.producthunt.com/r/p/1073763?app_id=339
+
+9. Fix Ugly PowerPoint by CubeOne (Score: 40)
+   Industry: Tech/SaaS
+   Funding: Launch - Unknown
+   Location: Global
+   Website: https://www.producthunt.com/r/p/1071410?app_id=339
+
+10. LIAM (Score: 40)
+   Industry: Tech/SaaS
+   Funding: Launch - Unknown
+   Location: Global
+   Website: https://www.producthunt.com/r/p/1074959?app_id=339
+
 ============================================================
 FILES GENERATED
 ------------------------------------------------------------
-• all_leads_20260207_125810.csv
-• high_quality_leads_20260207_125810.json
-• email_campaign_20260207_125810.csv
-• summary_report_20260207_125810.txt
+• all_leads_20260207_144246.csv
+• high_quality_leads_20260207_144246.json
+• email_campaign_20260207_144246.csv
+• summary_report_20260207_144246.txt

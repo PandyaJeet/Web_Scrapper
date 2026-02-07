@@ -61,23 +61,62 @@ class LeadScraper:
     
     def scrape_product_hunt(self, days_back=30):
         """
-        Scrape Product Hunt for recent launches
+        Scrape Product Hunt for recent launches using RSS feed
         """
-        logging.info(f"Scraping Product Hunt for launches in last {days_back} days...")
+        logging.info(f"Scraping Product Hunt RSS feed...")
         
         product_hunt_leads = []
         
         try:
-            # Product Hunt posts page
-            url = "https://www.producthunt.com/"
+            # Use RSS feed instead of HTML scraping
+            url = "https://www.producthunt.com/feed"
             response = requests.get(url, headers=self.headers, timeout=10)
             
             if response.status_code == 200:
-                soup = BeautifulSoup(response.content, 'html.parser')
+                # Use lxml-xml or xml parser if available, else html.parser
+                soup = BeautifulSoup(response.content, 'xml')
+                entries = soup.find_all('entry')
                 
-                # Note: Product Hunt's structure changes frequently
-                # This is a simplified example
-                logging.info("Product Hunt scraping completed (structure may vary)")
+                logging.info(f"Found {len(entries)} entries in RSS feed")
+                
+                for entry in entries:
+                    try:
+                        title = entry.find('title').text
+                        link_tag = entry.find('link', {'rel': 'alternate'})
+                        ph_link = link_tag['href'] if link_tag else ""
+                        published = entry.find('published').text
+                        content = entry.find('content').text
+                        
+                        # Clean content to get description
+                        description = BeautifulSoup(content, 'html.parser').get_text().strip()
+                        description = description.split('\\n')[0].strip()
+
+                        lead = {
+                            'company_name': title,
+                            'website': ph_link,
+                            'industry': 'Tech/SaaS',
+                            'funding_stage': 'Launch',
+                            'funding_amount': 'Unknown',
+                            'location': 'Global',
+                            'employee_count': 'Unknown',
+                            'founded_year': datetime.now().year,
+                            'description': description,
+                            'source': 'Product Hunt',
+                            'score': 0
+                        }
+                        
+                        # Try to find direct link
+                        content_soup = BeautifulSoup(content, 'html.parser')
+                        direct_link = content_soup.find('a', string='Link')
+                        if direct_link and direct_link.get('href'):
+                            lead['website'] = direct_link['href']
+
+                        product_hunt_leads.append(lead)
+
+                    except Exception as e:
+                        continue
+                
+                logging.info(f"Successfully scraped {len(product_hunt_leads)} leads from Product Hunt")
                 
         except Exception as e:
             logging.error(f"Error scraping Product Hunt: {str(e)}")

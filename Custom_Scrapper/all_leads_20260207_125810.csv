@@ -1,6 +1,0 @@
-company_name,website,industry,funding_stage,funding_amount,funding_date,location,employee_count,founded_year,description,contact_email,linkedin,source,score
-TechFlow AI,https://example-techflow.com,SaaS,Series A,$8M,2025-01-15,"San Francisco, CA",10-50,2023,AI-powered workflow automation for enterprises,founders@example.com,https://linkedin.com/company/example,Sample Data,105
-HealthSync Pro,https://example-healthsync.com,HealthTech,Seed,$2.5M,2024-12-01,"Austin, TX",5-10,2024,Patient engagement platform for healthcare providers,team@example.com,https://linkedin.com/company/example2,Sample Data,60
-EduLearn Platform,https://example-edulearn.com,EdTech,Series B,$15M,2024-10-20,"Boston, MA",50-100,2022,Online learning platform with AI tutoring,hello@example.com,https://linkedin.com/company/example3,Sample Data,100
-FinanceFlow,https://example-financeflow.com,FinTech,Series A,$12M,2025-01-05,"New York, NY",25-50,2023,SMB accounting automation software,info@example.com,https://linkedin.com/company/example4,Sample Data,80
-ShopLocal Hub,https://example-shoplocal.com,E-commerce,Seed,$3M,2024-11-10,"Seattle, WA",10-25,2024,Marketplace connecting local artisans with consumers,contact@example.com,https://linkedin.com/company/example5,Sample Data,60

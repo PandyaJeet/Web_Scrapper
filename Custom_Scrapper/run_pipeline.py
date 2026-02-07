@@ -48,11 +48,22 @@ class LeadGenerationPipeline:
                 logging.error(f"✗ Apollo.io failed: {str(e)}")
         
         else:
-            logging.info("Using sample data (set use_apis=True for real data)...")
+            logging.info("Running manual scrapers...")
+            
+            # Product Hunt (RSS)
+            product_hunt_leads = self.scraper.scrape_product_hunt()
+            self.all_leads.extend(product_hunt_leads)
+            
+            # Generate sample leads as fallback/supplement
+            if not product_hunt_leads:
+                logging.info("No leads found from scraping, adding sample data...")
+            else:
+                 logging.info("Adding sample data for demonstration...")
+                 
             sample_leads = self.scraper.generate_sample_leads()
             self.all_leads.extend(sample_leads)
         
-        print(f"\n📊 Total leads collected: {len(self.all_leads)}")
+        print(f"\\n📊 Total leads collected: {len(self.all_leads)}")
         return len(self.all_leads)
     
     def step2_enrich_leads(self):
@@ -337,7 +348,7 @@ def main():
     
     # Configuration
     USE_APIS = False  # Set to True to use real APIs (requires API keys in config.py)
-    MIN_SCORE = 50    # Minimum lead quality score (0-100)
+    MIN_SCORE = 30    # Minimum lead quality score (0-100)
     
     print("\n⚙️  Configuration:")
     print(f"   Use APIs: {'Yes (requires API keys)' if USE_APIS else 'No (using sample data)'}")
