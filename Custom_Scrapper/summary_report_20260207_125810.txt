@@ -1,0 +1,53 @@
+============================================================
+LEAD GENERATION SUMMARY REPORT
+============================================================
+
+Generated: 2026-02-07 12:58:10
+
+OVERALL STATS
+------------------------------------------------------------
+Total Leads Collected: 5
+High-Quality Leads: 5
+Emails Generated: 5
+Average Score: 81.0
+
+TOP 10 LEADS
+------------------------------------------------------------
+
+1. TechFlow AI (Score: 105)
+   Industry: SaaS
+   Funding: Series A - $8M
+   Location: San Francisco, CA
+   Website: https://example-techflow.com
+
+2. EduLearn Platform (Score: 100)
+   Industry: EdTech
+   Funding: Series B - $15M
+   Location: Boston, MA
+   Website: https://example-edulearn.com
+
+3. FinanceFlow (Score: 80)
+   Industry: FinTech
+   Funding: Series A - $12M
+   Location: New York, NY
+   Website: https://example-financeflow.com
+
+4. HealthSync Pro (Score: 60)
+   Industry: HealthTech
+   Funding: Seed - $2.5M
+   Location: Austin, TX
+   Website: https://example-healthsync.com
+
+5. ShopLocal Hub (Score: 60)
+   Industry: E-commerce
+   Funding: Seed - $3M
+   Location: Seattle, WA
+   Website: https://example-shoplocal.com
+
+============================================================
+FILES GENERATED
+------------------------------------------------------------
+• all_leads_20260207_125810.csv
+• high_quality_leads_20260207_125810.json
+• email_campaign_20260207_125810.csv
+• summary_report_20260207_125810.txt
